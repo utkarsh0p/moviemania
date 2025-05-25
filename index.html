@@ -11,22 +11,31 @@
     <nav class="navbar">
         <div class="logo">
             <a href="index.html">
-                <i class="fas fa-film"></i>
-                <span>MovieMania</span>
+                <div class="logo-icon">
+                    <i class="fas fa-play-circle"></i>
+                    <i class="fas fa-film"></i>
+                </div>
+                <span>Movie<span class="highlight">Mania</span></span>
             </a>
         </div>
-        <button class="menu-btn">
-            <i class="fas fa-bars"></i>
-        </button>
         <div class="nav-links">
             <a href="#" class="active">Home</a>
-            <a href="#">Movies</a>
-            <a href="#">TV Shows</a>
-            <a href="#">My List</a>
+            <a href="my-list.html">My List</a>
+            <button class="theme-toggle desktop-theme-toggle" id="themeToggle">
+                <i class="fas fa-sun"></i>
+            </button>
             <div class="auth-buttons">
                 <button class="login-btn">Login</button>
                 <button class="signup-btn">Sign Up</button>
             </div>
+        </div>
+        <div class="mobile-controls">
+            <button class="theme-toggle mobile-theme-toggle" id="mobileThemeToggle">
+                <i class="fas fa-sun"></i>
+            </button>
+            <button class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
@@ -38,10 +47,28 @@
                 <input type="text" placeholder="Search for movies, TV shows...">
                 <button><i class="fas fa-search"></i><span class="search-text">Search</span></button>
             </div>
+            <div class="genre-filter">
+                <button class="genre-btn active" data-genre="recommended">Recommended</button>
+                <button class="genre-btn" data-genre="action">Action</button>
+                <button class="genre-btn" data-genre="suspense">Suspense</button>
+                <button class="genre-btn" data-genre="thriller">Thriller</button>
+                <button class="genre-btn" data-genre="drama">Drama</button>
+                <button class="genre-btn" data-genre="comedy">Comedy</button>
+                <button class="genre-btn" data-genre="horror">Horror</button>
+                <button class="genre-btn" data-genre="romance">Romance</button>
+            </div>
         </div>
     </div>
 
-    <!-- Login Modal -->
+    <div class="movie-section">
+        <div class="section-header">
+            <h2 id="section-title">Recommended Movies</h2>
+        </div>
+        <div class="movie-grid" id="movie-grid">
+            <!-- Movie cards will be dynamically added here -->
+        </div>
+    </div>
+
     <div class="modal" id="loginModal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -59,7 +86,6 @@
         </div>
     </div>
 
-    <!-- Signup Modal -->
     <div class="modal" id="signupModal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -82,6 +108,10 @@
             <p class="form-footer">Already have an account? <a href="#" id="showLogin">Login</a></p>
         </div>
     </div>
+
+    <footer class="site-footer">
+        <p>© 2025 Made with ❤️ by Utkarsh</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

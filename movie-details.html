@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="movie-details">
+            <button id="backButton" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Search
+            </button>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-sun"></i>
+            </button>
+            <div class="movie-header">
+                <div class="movie-poster-container">
+                    <img id="moviePoster" src="" alt="Movie Poster">
+                </div>
+                <div class="movie-info-container">
+                    <h1 id="movieTitle"></h1>
+                    <p id="movieTagline" class="tagline"></p>
+                    <div class="movie-meta">
+                        <p id="movieReleaseDate"></p>
+                        <p id="movieRuntime"></p>
+                        <p id="movieRating"></p>
+                    </div>
+                    <div id="movieGenres" class="genres"></div>
+                    <p id="movieOverview" class="overview"></p>
+                    <button id="addToListBtn" class="add-to-list-btn">
+                        <i class="fas fa-plus"></i>
+                        <span class="btn-text">Add to List</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="trailer-section">
+                <h2>Trailer</h2>
+                <div id="trailerContainer"></div>
+            </div>
+
+            <div class="cast-section">
+                <h2>Cast & Crew</h2>
+                <div id="castContainer" class="cast-grid"></div>
+            </div>
+        </div>
+    </div>
+    <script src="theme.js"></script>
+    <script src="movie-details.js"></script>
+</body>
+</html> 
